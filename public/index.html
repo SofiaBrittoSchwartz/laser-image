@@ -32,14 +32,19 @@
   <div id="layerb"></div>
   <div id="drawing"></div>
   <script>
-    const picA = 'mona-lisa-leonardo-da-vinci-la-gioconda-oil-painting-40997.jpeg'
+    // const picA = 'mona-lisa-leonardo-da-vinci-la-gioconda-oil-painting-40997.jpeg'
+    const picE = 'ada_lovelace_color.png'
     const picB = 'test-image.png'
-    const picC = "https://i.imgur.com/NOAqlBx.jpg"
+    const picC = 'https://i.imgur.com/NOAqlBx.jpg'
     const picD = 'mona-small.png'
-    const picE = 'mona-sml-b.jpeg'
+    // const picE = 'mona-sml-b.jpeg'
+    
+    // Make these dynamic
     const imgDims = [200, 300]
     // const imgDimsB = [200, 300]
     var marvinImage = new MarvinImage();
+    
+    // drawing the HTML div w/ id 'drawing'
     var draw = SVG('drawing')
       .size(...imgDims)
     draw.rect(...imgDims).move(0, 0)
@@ -48,7 +53,7 @@
     // var drawR = SVG('layerr')
     //   .size(...imgDims)
     //   .rect(...imgDims).move(0, 0)
-      //.attr({ fill: 'red' })
+    //   .attr({ fill: 'red' })
     // var drawG = SVG('layerg')
     //   .size(...imgDims)
     //   .rect(...imgDims).move(0, 0).attr({ fill: 'green' })
