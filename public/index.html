@@ -32,23 +32,19 @@
   <div id="layerb"></div>
   <div id="drawing"></div>
   <script>
-    // const picA = 'mona-lisa-leonardo-da-vinci-la-gioconda-oil-painting-40997.jpeg'
-    const picE = 'ada_lovelace_color.png'
-    const picB = 'test-image.png'
+    // const picA = 'images/mona-lisa-leonardo-da-vinci-la-gioconda-oil-painting-40997.jpeg'
+    const picE = 'images/ada_lovelace_color.png'
+    const picB = 'images/test-image.png'
     const picC = 'https://i.imgur.com/NOAqlBx.jpg'
-    const picD = 'mona-small.png'
-    // const picE = 'mona-sml-b.jpeg'
+    const picD = 'images/mona-small.png'
+    // const picE = 'images/mona-sml-b.jpeg'
     
-    // Make these dynamic
-    const imgDims = [200, 300]
     // const imgDimsB = [200, 300]
     var marvinImage = new MarvinImage();
+
     
     // drawing the HTML div w/ id 'drawing'
-    var draw = SVG('drawing')
-      .size(...imgDims)
-    draw.rect(...imgDims).move(0, 0)
-      .attr({ fill: 'white' })
+    var draw = SVG('drawing');
 
     // var drawR = SVG('layerr')
     //   .size(...imgDims)
@@ -104,6 +100,12 @@
         i += 4
       }
     }
+    const imgDims = [marvinImage.imageData.width, marvinImage.imageData.height]
+
+    draw.size(...imgDims)
+    draw.rect(...imgDims).move(0, 0)
+      .attr({ fill: 'white' })
+    
     marvinImage.load(picE, cb);
     // SVG.on(document, 'DOMContentLoaded', function () {
     //   console.log('abc', SVG)

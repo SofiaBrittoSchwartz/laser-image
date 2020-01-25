@@ -1,0 +1,12 @@
+body {
+  font-size: 11px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#display {
+  background: black;
+  font-size: 2px;
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+}
