@@ -4,7 +4,7 @@
   "description": "A script for converting images into SVG files to be used in laser cutting",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "nodemon": "nodemon app.js"
   },
   "author": "Jose Collas",
@@ -16,5 +16,8 @@
     "nodemon": "^2.0.2",
     "p5": "^0.10.2",
     "pngjs": "^3.4.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }
